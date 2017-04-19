@@ -20,18 +20,20 @@ soddisfatto = False
 while not soddisfatto:
     if ll > 0:
         for a in range(0, ll):
-            password.append(lowercase_letters[random.randint(0, len(lowercase_letters)-1)])
+            password.append(
+                lowercase_letters[random.randint(0, len(lowercase_letters) - 1)])
 
     if ul > 0:
         for b in range(0, ul):
-            password.append(uppercase_letters[random.randint(0, len(uppercase_letters)-1)])
+            password.append(
+                uppercase_letters[random.randint(0, len(uppercase_letters) - 1)])
     if num > 0:
         for c in range(0, num):
-            password.append(numbers[random.randint(0, len(numbers)-1)])
+            password.append(numbers[random.randint(0, len(numbers) - 1)])
 
     if sym > 0:
         for d in range(0, sym):
-            password.append(symbols[random.randint(0, len(symbols)-1)])
+            password.append(symbols[random.randint(0, len(symbols) - 1)])
 
     random.shuffle(password)
     sh_pass = "".join(str(p) for p in password)
